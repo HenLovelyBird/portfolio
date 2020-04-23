@@ -1,0 +1,41 @@
+/* about me area */
+
+#about-me-header {
+  margin-left: 21em;
+  margin-bottom: 6em;
+}
+.about-me-contacts {
+  position: absolute;
+  width: 370px;
+  height: 123px;
+}
+.about-me-name {
+  position: absolute;
+  width: 115.05px;
+  height: 16.32px;
+  margin-left: 43em;
+  margin-top: 3em;
+}
+.about-me-pic {
+  position: absolute;
+  width: 135px;
+  height: 122px;
+  margin-left: 53em;
+}
+.about-me-skills.row {
+  margin-top: 11em;
+}
+.about-me-pic-and-link {
+  height: 350px;
+  margin-left: 140px;
+  margin-top: 3em;
+}
+#strato-pic {
+  height: 360px;
+  margin-left: -6em;
+}
+
+.about-me-skills-what-else {
+  margin-right: 3em;
+}
+/* end about me area */

@@ -13,29 +13,29 @@
       href="https://fonts.googleapis.com/css2?family=Lekton:wght@700&display=swap"
       rel="stylesheet"
     />
-    
+
     <style>
       /* globalcss */
 
       /* Smartphones (portrait and landscape) ----------- */
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-        .banner-img{
-        text-align: start !important;
+        .banner-img {
+          text-align: start !important;
         }
         .greeting {
-            left: 12em !important;   
+          left: 12em !important;
         }
-        header nav ul{
-            left: 690px !important;
-            top: -130px !important;
+        header nav ul {
+          left: 690px !important;
+          top: -130px !important;
         }
-        #projectsHeader{
-            left: 15em !important;
-            top: 12em !important;
+        #projectsHeader {
+          left: 15em !important;
+          top: 12em !important;
         }
         .projects-box-and-btn {
-            margin-bottom: 105px !important;
-            margin-left: 16em !important;
+          margin-bottom: 105px !important;
+          margin-left: 16em !important;
         }
       }
 
@@ -54,23 +54,23 @@
         /* STYLES GO HERE */
       }
 
-      .row{
-          margin: 0;
+      .row {
+        margin: 0;
       }
       /* end globalcss */
 
       /* NavBanner */
       header {
         background-color: #472f40;
-        position: absolute;
+        position: fixed;
         width: 100%;
         top: 0px;
-        height: 150px; 
+        height: 150px;
+        z-index: 3;
       }
 
       body {
         color: #61ff00;
-        background-color: black;
         font-family: "Lekton", sans-serif;
       }
 
@@ -86,21 +86,19 @@
         text-decoration: none;
         color: inherit;
       }
-      
+
       .banner-img {
         text-align: end;
         height: 165px;
         opacity: 1;
-        
       }
-      .banner-img:hover{
-        opacity: .5;
+      .banner-img:hover {
+        opacity: 0.5;
         -webkit-transform: scale(1.3);
         -ms-transform: scale(1.3);
         transform: scale(1.3);
       }
 
-      
       img {
         height: 150px;
       }
@@ -114,7 +112,10 @@
         visibility: hidden;
       }
       /* End NavBanner */
-
+      .wrapper-container {
+        padding-top: 150px;
+        background-color: black;
+      }
       /* ProjectsArea */
       #projectsHeader {
         position: absolute;
@@ -123,9 +124,8 @@
       }
       .projects {
         margin-top: 24em;
-        margin-left: 6.5em;
-    }
-      
+      }
+
       .projects-box {
         height: 200px;
         max-width: 100%;
@@ -165,13 +165,13 @@
         object-fit: cover;
         width: 260px;
       }
-      #linkedin-cover-img:hover{
-          opacity: 0;
-          transition: .5s ease;
+      #linkedin-cover-img:hover {
+        opacity: 0;
+        transition: 0.5s ease;
       }
 
-    .overlay{
-        /* position: absolute; */
+      .overlay {
+        position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
@@ -179,15 +179,15 @@
         height: 100%;
         width: 100%;
         opacity: 0;
-        transition: .5s ease;
-        background-color: black;      
-    }
+        transition: 0.5s ease;
+        background-color: black;
+      }
 
-    .overlay:hover{
+      .overlay:hover {
         opacity: 1;
-    }
+      }
 
-    .overlay-txt{
+      .overlay-txt {
         color: #61ff00;
         font-size: 20px;
         position: absolute;
@@ -199,6 +199,8 @@
         text-align: top;
       }
       /* End ProjectsArea */
+
+     
     </style>
   </head>
 
@@ -225,63 +227,94 @@
       </nav>
     </header>
     <!-- End NavBanner -->
-    <!-- was trying to link here another page like in react...how to do it in html? <link href="/Pages/Projects.html"> -->
-    <!-- ProjectsArea -->
-    <h4 id="projectsHeader">Projects</h4>
+    <div class="wrapper-container">
+      <!-- was trying to link here another page like in react...how to do it in html? <link href="/Pages/Projects.html"> -->
+      <!-- ProjectsArea -->
+      <h4 id="projectsHeader">Projects</h4>
 
-    <div class="projects container" fluid>
-    
-      <div class="projects row">
-
-        <div class="col-md-6 col-xs-12 col-lg-4 
-        contain projects-box-and-btn 
-        flex-column justify-content-between align-items-center h-100">
-        <div class="overlay">
-            <div class="overlay-txt">Hey</div>
-        </div>
-          <img
-            id="linkedin-cover-img"
-            src="./img/linkedincover.png"
-            alt="project1-cover"/>
-            
-
-          <a href="#preview"><button class="btn preview" target="_blank">live preview</button></a>
-          <a href="#github"><button class="btn github" target="_blank">github</button></a>
-        </div>
-
-        <div class="col-md-6 col-xs-12 col-lg-4 
-        contain projects-box-and-btn 
-        flex-column justify-content-between align-items-center h-100">
-          <img
-            id="linkedin-cover-img"
-            src="./img/linkedincover.png"
-            alt="project1-cover"/>
+      <div class="projects container" fluid>
+        <div class="projects row">
+          <div
+            class="col-md-6 col-xs-12 col-lg-4 contain projects-box-and-btn flex-column justify-content-between align-items-center h-100"
+          >
             <div class="overlay">
+              <div class="overlay-txt">Hey</div>
+            </div>
+            <img
+              id="linkedin-cover-img"
+              src="./img/linkedincover.png"
+              alt="project1-cover"
+            />
+
+            <a href="#preview"
+              ><button class="btn preview" target="_blank">
+                live preview
+              </button></a
+            >
+            <a href="#github"
+              ><button class="btn github" target="_blank">github</button></a
+            >
+          </div>
+
+          <div
+            class="col-md-6 col-xs-12 col-lg-4 contain projects-box-and-btn flex-column justify-content-between align-items-center h-100"
+          >
+            <div class="position-relative">
+              <img
+                id="linkedin-cover-img"
+                src="./img/linkedincover.png"
+                alt="project1-cover"
+              />
+              <div class="overlay">
                 <div class="overlay-txt">there,</div>
+              </div>
             </div>
 
-          <a href="#preview"><button class="btn preview" target="_blank">live preview</button></a>
-          <a href="#github"><button class="btn github" target="_blank">github</button></a>
-        </div>
+            <a href="#preview"
+              ><button class="btn preview" target="_blank">
+                live preview
+              </button></a
+            >
+            <a href="#github"
+              ><button class="btn github" target="_blank">github</button></a
+            >
+          </div>
 
-        <div class="col-md-6 col-xs-12 col-lg-4 
-        contain projects-box-and-btn 
-        flex-column justify-content-between align-items-center h-100">
-          <img
-            id="linkedin-cover-img"
-            src="./img/linkedincover.png"
-            alt="project1-cover"/>
+          <div
+            class="col-xs-12 col-sm-12 col-md-6 col-lg-4 contain projects-box-and-btn flex-column justify-content-between align-items-center h-100 w-100"
+          >
+            <img
+              id="linkedin-cover-img"
+              src="./img/linkedincover.png"
+              alt="project1-cover"
+            />
             <div class="overlay">
-                <div class="overlay-txt">friend.</div>
+              <div class="overlay-txt">friend.</div>
             </div>
 
-          <a href="#preview"><button class="btn preview" target="_blank">live preview</button></a>
-          <a href="#github"><button class="btn github" target="_blank">github</button></a>
+            <a href="#preview"
+              ><button class="btn preview" target="_blank">
+                live preview
+              </button></a
+            >
+            <a href="#github"
+              ><button class="btn github" target="_blank">github</button></a
+            >
+          </div>
         </div>
-
       </div>
+      <!-- End ProjectsArea -->
 
-    </div>
-    <!-- End ProjectsArea -->
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <a href="/aboutme.html">
+      
+
   </body>
 </html>
