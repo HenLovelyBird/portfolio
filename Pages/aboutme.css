@@ -1,30 +1,31 @@
 /* about me area */
 
 #about-me-header {
-  margin-left: 21em;
-  margin-bottom: 6em;
+  text-align: center;
 }
 .about-me-contacts {
   position: absolute;
   width: 370px;
   height: 123px;
 }
-.about-me-name {
-  position: absolute;
+#about-me-name {
+  /* position: absolute;
   width: 115.05px;
   height: 16.32px;
   margin-left: 43em;
-  margin-top: 3em;
+  margin-top: 3em; */
+  display: inline;
 }
-.about-me-pic {
-  position: absolute;
+#about-me-pic {
+  /* position: absolute;
   width: 135px;
   height: 122px;
-  margin-left: 53em;
+  margin-left: 53em; */
+  float: right;
 }
-.about-me-skills.row {
+/* .about-me-skills.row {
   margin-top: 11em;
-}
+} */
 .about-me-pic-and-link {
   height: 350px;
   margin-left: 140px;
@@ -36,6 +37,6 @@
 }
 
 .about-me-skills-what-else {
-  margin-right: 3em;
+  float: right;
 }
 /* end about me area */

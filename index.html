@@ -13,13 +13,15 @@
       href="https://fonts.googleapis.com/css2?family=Lekton:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="" />
 
+    <!-- <link rel="stylesheet" href="./Pages/aboutme.css" /> -->
     <style>
       /* globalcss */
 
       /* Smartphones (portrait and landscape) ----------- */
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-        .banner-img {
+        /* .banner-img {
           text-align: start !important;
         }
         .greeting {
@@ -36,7 +38,7 @@
         .projects-box-and-btn {
           margin-bottom: 105px !important;
           margin-left: 16em !important;
-        }
+        } */
       }
 
       /* iPads (portrait and landscape) ----------- */
@@ -60,6 +62,9 @@
       /* end globalcss */
 
       /* NavBanner */
+      section {
+        display: block;
+      }
       header {
         background-color: #472f40;
         position: fixed;
@@ -118,12 +123,12 @@
       }
       /* ProjectsArea */
       #projectsHeader {
-        position: absolute;
-        left: 28em;
-        top: 10em;
+        position: relative;
+        text-align: center;
+        top: 5em;
       }
       .projects {
-        margin-top: 24em;
+        margin-top: 13em;
       }
 
       .projects-box {
@@ -154,13 +159,6 @@
       .btn-div {
         display: contents;
       }
-      /* .btn.preview{
-        margin-left: 0;
-    }
-
-    .btn.github{
-        margin-right: 0;
-    } */
       #linkedin-cover-img {
         object-fit: cover;
         width: 260px;
@@ -200,51 +198,112 @@
       }
       /* End ProjectsArea */
 
-     
+      /* about me area */
+
+      #about-me-header {
+        text-align: center;
+        margin-bottom: 4em;
+      }
+      .about-me-contacts {
+        position: absolute;
+        width: 370px;
+        height: 123px;
+      }
+      #about-me-name {
+        display: inline;
+      }
+      #about-me-pic {
+        display: inline;
+        margin-left: 11em;
+      }
+      .about-me-col-left {
+        padding: 60px;
+      }
+      .about-me-col-right {
+        padding: 40px;
+      }
+      #strato-pic {
+        height: 360px;
+      }
+
+      .about-me-skills-what-else {
+      }
+      .btn-strato {
+        z-index: 1;
+        margin-top: -12em;
+        margin-left: 42px;
+        background-color: #472f40;
+        font-size: 18px;
+        /* padding: 12px; */
+        width: 24%;
+        position: absolute;
+      }
+      /* end aboutme area */
+      /* start contactme area */
+      .contact-me-row {
+        text-align: center;
+      }
+      /* end contactme area */
     </style>
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#navbarResponsive">
     <!-- NavBanner -->
-    <header class="row justify-content-between" flex>
-      <div class="banner-img col-md-4">
-        <img src="../img/banner-img.png" width="180" height="211" left="127" />
-      </div>
+    <section class="header-section" flex>
+      <header class="row justify-content-between" flex>
+        <div class="banner-img col-xs-12 col-sm-12 col-md-6 col-lg-4">
+          <img
+            src="../img/banner-img.png"
+            width="180"
+            height="211"
+            left="127"
+          />
+        </div>
 
-      <div class="greeting col-md-4">
-        <h2>Hello, I am Heni</h2>
-        <p>
-          a M.E.R.N. Fullstack Developer / Choreographer / Director
-        </p>
-      </div>
+        <div class="greeting col-xs-12 col-sm-12 col-md-6 col-lg-4">
+          <h2>Hello, I am Heni</h2>
+          <p>
+            a M.E.R.N. Fullstack Developer / Choreographer / Director
+          </p>
+        </div>
 
-      <nav class="col-md-4">
-        <ul>
-          <a href="#Projects" target="_top"><li>Projects</li></a>
-          <a href="#AboutMe" target="_top"><li>About Me</li></a>
-          <a href="#Contact" target="_top"><li>Contact</li></a>
-        </ul>
-      </nav>
-    </header>
+        <nav class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+          <ul>
+            <a href="#Projects" target="_top"
+              ><li id="nav-projects" class="offset">Projects</li></a
+            >
+            <a href="/Pages/aboutme.html" target="_top"
+              ><li id="nav-about" class="offset">About Me</li></a
+            >
+            <a href="#Contact" target="_top"
+              ><li id="nav-contact" class="offset">Contact</li></a
+            >
+          </ul>
+        </nav>
+      </header>
+    </section>
     <!-- End NavBanner -->
     <div class="wrapper-container">
-      <!-- was trying to link here another page like in react...how to do it in html? <link href="/Pages/Projects.html"> -->
+      <!-- after refactoring, link this section <a href="/projects.html"> -->
       <!-- ProjectsArea -->
-      <h4 id="projectsHeader">Projects</h4>
+      <section class="projects-area offset">
+        <h4 id="projectsHeader">Projects</h4>
 
-      <div class="projects container" fluid>
-        <div class="projects row">
+        <!-- project one -->
+        <div class="projects row" flex>
           <div
-            class="col-md-6 col-xs-12 col-lg-4 contain projects-box-and-btn flex-column justify-content-between align-items-center h-100"
+            class="col-xs-12 col-sm-12 col-md-6 col-lg-4 contain projects-box-and-btn flex-column justify-content-between align-items-center h-100 w-100"
           >
-            <div class="overlay">
-              <div class="overlay-txt">Hey</div>
+            <div class="position-relative">
+              <img
+                id="linkedin-cover-img"
+                src="./img/linkedincover.png"
+                alt="project1-cover"
+              />
+              <div class="overlay">
+                <div class="overlay-txt">Hey</div>
+              </div>
             </div>
-            <img
-              id="linkedin-cover-img"
-              src="./img/linkedincover.png"
-              alt="project1-cover"
-            />
 
             <a href="#preview"
               ><button class="btn preview" target="_blank">
@@ -255,15 +314,17 @@
               ><button class="btn github" target="_blank">github</button></a
             >
           </div>
+          <!-- end project one -->
 
+          <!-- project two -->
           <div
-            class="col-md-6 col-xs-12 col-lg-4 contain projects-box-and-btn flex-column justify-content-between align-items-center h-100"
+            class="col-xs-12 col-sm-12 col-md-6 col-lg-4 contain projects-box-and-btn flex-column justify-content-between align-items-center h-100 w-100"
           >
             <div class="position-relative">
               <img
                 id="linkedin-cover-img"
                 src="./img/linkedincover.png"
-                alt="project1-cover"
+                alt="project2-cover"
               />
               <div class="overlay">
                 <div class="overlay-txt">there,</div>
@@ -279,17 +340,21 @@
               ><button class="btn github" target="_blank">github</button></a
             >
           </div>
+          <!-- end project two -->
 
+          <!-- project three -->
           <div
             class="col-xs-12 col-sm-12 col-md-6 col-lg-4 contain projects-box-and-btn flex-column justify-content-between align-items-center h-100 w-100"
           >
-            <img
-              id="linkedin-cover-img"
-              src="./img/linkedincover.png"
-              alt="project1-cover"
-            />
-            <div class="overlay">
-              <div class="overlay-txt">friend.</div>
+            <div class="position-relative">
+              <img
+                id="linkedin-cover-img"
+                src="./img/linkedincover.png"
+                alt="project3-cover"
+              />
+              <div class="overlay">
+                <div class="overlay-txt">friend.</div>
+              </div>
             </div>
 
             <a href="#preview"
@@ -301,8 +366,9 @@
               ><button class="btn github" target="_blank">github</button></a
             >
           </div>
+          <!-- end project three -->
         </div>
-      </div>
+      </section>
       <!-- End ProjectsArea -->
 
       <br />
@@ -313,8 +379,119 @@
       <br />
       <br />
 
-      <a href="/aboutme.html">
-      
+      <!-- aboutme area -->
+      <section class="about-me-section offset" flex>
+        <h4 id="about-me-header">About Me.</h4>
 
+        <div class="about-me row" flex>
+          <div class="about-me-col-left col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div id="about-me-contacts">
+              <p>Coder / Choreographer / Creative Director</p>
+              <p>Websites: stratofyzika.com / heni.ninja</p>
+              <p>Email: heni@meaning.systems</p>
+              <p>LinkedIn/Github: henlovelybird</p>
+            </div>
+            <br />
+            <br />
+            <div class="about-me-skills">
+              <p>SKILLS/////////////////////////////////</p>
+              <p>M.E.R.N. Fullstack Developer</p>
+              <p>Frontend: Bootstrap, Javascript, ReactJS</p>
+              <p>Backend: NodeJS, ExpressJS, MongoDB, PostgreSQL</p>
+              <p>Project ManagementTools: Trello, Slack, Notion</p>
+              <p>Design Tools: Figma, Miro, LucidChart</p>
+            </div>
+            <br />
+            <br />
+            <div class="about-me-education">
+              <p>EDUCATION//////////////////////////////////////</p>
+              <p>Strive School, Berlin — Fullstack October 2019 - March 2020</p>
+              <p>
+                Principles of Programming, UX/UI and FE Development, Javascript,
+                Bootstrap 4, HTML, CSS, ReactJS, Design Patterns, Async
+                Patterns, AJAX, Redux, Node.js, Agile, OOP, Package
+                Manager(npm), ExpressJS, Middleware, REST, Client-Server
+                Architecture, SQL, NoSQL, ORM(Mongoose), Cloud Computing,
+                Cybersecurity and networks.
+              </p>
+
+              <p>Critical Engineering, Berlin April 2017 - August 2017</p>
+              <p>Networking, CommandLine, Security and Counter-surveillance.</p>
+
+              <p>Mills College, Oakland CA, USA. B.A. August 2007 - May 2009</p>
+              <p>Dance and Intermedia Arts.</p>
+            </div>
+          </div>
+
+          <div class="about-me-col-right col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <p id="about-me-name">Hen/I</p>
+
+            <div id="about-me-pic">
+              <img src="../img/about-me-img.png" alt="about-me-img-ascii" />
+            </div>
+
+            <br />
+            <br />
+
+            <div class="about-me-skills-what-else">
+              <p>WHAT I DO WHEN I'M NOT CODING///////////////////////</p>
+              <p>Stratofyzika, an Intermedia Performance Collective</p>
+              <p>Choreographer/Dancer/Creative Director/Co-Founder</p>
+              <p>Since May 2012-present</p>
+              <p>Oversees Choreography and performative aspects</p>
+              <p>
+                Works collectively with sound artists, lighting, costume and
+                visual designers, creative coders, and other performers to
+                realize the work.
+              </p>
+              <p>Conducts intesive research about concepts</p>
+              <p>Co-writer for press, website, and funding</p>
+            </div>
+
+            <div class="about-me-pic-and-link">
+              <img
+                src="./img/danceTechRes.jpeg/"
+                id="strato-pic"
+                alt="strato-img-and-link"
+              />
+              <a href="https://stratofyzika.com/"></a
+              ><button
+                type="link"
+                class="btn-strato btn btn-success"
+                target="_blank"
+              >
+                StratoFyzika
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end aboutme area -->
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <!-- contact area -->
+      <div class="contact-me-row row" class="offset" flex>
+        <div class="contact-me col">
+          <h4 id="contact-heading">Contact</h4>
+          <p>heni@meaning.systems</p>
+          <div>
+            <a href="https://www.linkedin.com/in/henlovelybird/" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+          <div>
+            <a href="https://github.com/HenLovelyBird" target="_blank"
+              ><i class="fab fa-github-square"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <!-- end contact area -->
+    </div>
   </body>
 </html>
