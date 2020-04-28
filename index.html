@@ -3,6 +3,12 @@
   <head>
     <title>portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -13,16 +19,6 @@
       href="https://fonts.googleapis.com/css2?family=Lekton:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="../fontawesome-free-5.13.0-desktop/svgs/brands/linkedin.svg"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="../fontawesome-free-5.13.0-desktop/svgs/brands/github-square.svg"
-    />
-
-    <!-- <link rel="stylesheet" href="./Pages/aboutme.css" /> -->
     <style>
       /* globalcss */
 
@@ -79,6 +75,8 @@
         top: 0px;
         height: 150px;
         z-index: 3;
+        flex-direction: row;
+        flex-wrap: nowrap !important;
       }
 
       body {
@@ -229,38 +227,58 @@
       .about-me-col-right {
         padding: 40px;
       }
+      .about-me-pic-and-link {
+        position: relative;
+        width: 100%;
+      }
       #strato-pic {
-        height: 360px;
+        width: 100%;
+        height: auto;
       }
 
-      .about-me-skills-what-else {
-      }
       .btn-strato {
-        z-index: 1;
-        margin-top: -12em;
-        margin-left: 42px;
-        background-color: #472f40;
+        top: 50%;
+        left: 15%;
+        background-color: #472f40 !important;
         font-size: 18px;
-        /* padding: 12px; */
         width: 24%;
         position: absolute;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        padding: 16px 17px;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
       }
       /* end aboutme area */
+
       /* start contactme area */
       .contact-me-row {
         text-align: center;
       }
-      /* .fa-icon {
-        background-color: #472f40;
-        size: 100%;
-      } */
+
+      .fa-icon-row {
+        justify-content: center;
+        margin-left: 23px;
+      }
+      .fa-icon {
+        font-size: 2em;
+        padding-right: 12px;
+      }
+      #resume-btn {
+        margin-left: 2px;
+        font-size: 18px;
+        padding: 13px;
+        width: 103px;
+        position: relative;
+      }
       /* end contactme area */
     </style>
   </head>
 
   <body data-spy="scroll" data-target="#navbarResponsive">
     <!-- NavBanner -->
-    <section class="header-section" flex>
+    <section class="header-section">
       <header class="row justify-content-between" flex>
         <div class="banner-img col-xs-12 col-sm-12 col-md-6 col-lg-4">
           <img
@@ -280,13 +298,13 @@
 
         <nav class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
           <ul>
-            <a href="#Projects" target="_top"
+            <a href="#projects-area" target="_top"
               ><li id="nav-projects" class="offset">Projects</li></a
             >
-            <a href="/Pages/aboutme.html" target="_top"
+            <a href="#about-me" target="_top"
               ><li id="nav-about" class="offset">About Me</li></a
             >
-            <a href="#Contact" target="_top"
+            <a href="#contact-me" target="_top"
               ><li id="nav-contact" class="offset">Contact</li></a
             >
           </ul>
@@ -297,7 +315,7 @@
     <div class="wrapper-container">
       <!-- after refactoring, link this section <a href="/projects.html"> -->
       <!-- ProjectsArea -->
-      <section class="projects-area offset">
+      <section class="projects-area offset" id="projects-area">
         <h4 id="projectsHeader">Projects</h4>
 
         <!-- project one -->
@@ -308,7 +326,7 @@
             <div class="position-relative">
               <img
                 id="linkedin-cover-img"
-                src="./img/linkedincover.png"
+                src="./img/projOne.png"
                 alt="project1-cover"
               />
               <div class="overlay">
@@ -316,13 +334,19 @@
               </div>
             </div>
 
-            <a href="#preview"
-              ><button class="btn preview" target="_blank">
-                live preview
+            <a
+              href="https://github.com/HenLovelyBird/FE_PP_Linkedin_MongoReact"
+              target="_blank"
+              ><button class="btn preview">
+                LinkedIn MockUp (Fe)
               </button></a
             >
-            <a href="#github"
-              ><button class="btn github" target="_blank">github</button></a
+            <a
+              href="https://github.com/HenLovelyBird/BE_PP_Linkedin_MongoDB"
+              target="_blank"
+              ><button class="btn github">
+                LinkedIn Mockup (Be)
+              </button></a
             >
           </div>
           <!-- end project one -->
@@ -334,7 +358,7 @@
             <div class="position-relative">
               <img
                 id="linkedin-cover-img"
-                src="./img/linkedincover.png"
+                src="./img/projTwo.png"
                 alt="project2-cover"
               />
               <div class="overlay">
@@ -342,13 +366,17 @@
               </div>
             </div>
 
-            <a href="#preview"
-              ><button class="btn preview" target="_blank">
-                live preview
+            <a
+              href="https://ideal-place-to-work-fe.herokuapp.com/"
+              target="_blank"
+              ><button class="btn preview">
+                Live Preview
               </button></a
             >
-            <a href="#github"
-              ><button class="btn github" target="_blank">github</button></a
+            <a
+              href="https://github.com/HenLovelyBird/capstoneProjectFe"
+              target="_blank"
+              ><button class="btn github">Nomad Cafe Finder (Fe)</button></a
             >
           </div>
           <!-- end project two -->
@@ -360,7 +388,7 @@
             <div class="position-relative">
               <img
                 id="linkedin-cover-img"
-                src="./img/linkedincover.png"
+                src="./img/projThreeSmaller.png"
                 alt="project3-cover"
               />
               <div class="overlay">
@@ -368,13 +396,15 @@
               </div>
             </div>
 
-            <a href="#preview"
-              ><button class="btn preview" target="_blank">
-                live preview
+            <a href="https://github.com/HenLovelyBird/FEBooks" target="_blank"
+              ><button class="btn preview">
+                Bookstore (Fe)
               </button></a
             >
-            <a href="#github"
-              ><button class="btn github" target="_blank">github</button></a
+            <a href="https://github.com/HenLovelyBird/BEBooks" target="_blank"
+              ><button class="btn github">
+                Bookstore API
+              </button></a
             >
           </div>
           <!-- end project three -->
@@ -391,7 +421,7 @@
       <br />
 
       <!-- aboutme area -->
-      <section class="about-me-section offset" flex>
+      <section class="about-me-section offset" id="about-me" flex>
         <h4 id="about-me-header">About Me.</h4>
 
         <div class="about-me row" flex>
@@ -459,20 +489,17 @@
               <p>Co-writer for press, website, and funding</p>
             </div>
 
-            <div class="about-me-pic-and-link">
+            <div class="about-me-pic-and-link container">
               <img
                 src="./img/danceTechRes.jpeg/"
                 id="strato-pic"
                 alt="strato-img-and-link"
               />
-              <a href="https://stratofyzika.com/"></a
-              ><button
-                type="link"
-                class="btn-strato btn btn-success"
-                target="_blank"
-              >
-                StratoFyzika
-              </button>
+              <a href="https://stratofyzika.com/" target="_blank"
+                ><button class="btn-strato btn btn-success">
+                  StratoFyzika
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -486,25 +513,35 @@
       <br />
       <br />
       <!-- contact area -->
-      <div class="contact-me-row row" class="offset" flex>
+      <div class="contact-me-row row offset" id="contact-me" flex>
         <div class="contact-me col">
           <h4 id="contact-heading">Contact</h4>
           <p>heni@meaning.systems</p>
 
-          <div id="font-icon row">
-          <div class="fa-icon col">
-            <a href="https://www.linkedin.com/in/henlovelybird/" target="_blank"
-              ><i class="fab fa-linkedin">linkedin</i></a
-            >
+          <div class="fa-icon-row row">
+            <div class="fa-icon col-0">
+              <a
+                href="https://www.linkedin.com/in/henlovelybird/"
+                target="_blank"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </div>
+            <div class="fa-icon col-0">
+              <a href="https://github.com/HenLovelyBird" target="_blank"
+                ><i class="fa fa-github-square"></i
+              ></a>
+            </div>
+            <div class="resume-btn col-0">
+              <a
+                href="https://gitconnected.com/henlovelybird/resume"
+                target="_blank"
+              >
+                <button class="btn btn-outline-success col-0" id="resume-btn">
+                  Resume
+                </button></a
+              >
+            </div>
           </div>
-          <div class="fa-icon col">
-            <a href="https://github.com/HenLovelyBird" target="_blank"
-              ><i class="fab fa-github-square">github</i></a
-            >
-          </div>
-          </div>
-
-        </div>
         </div>
       </div>
       <!-- end contact area -->
