@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>portfolio</title>
+    <title>Hen/I Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link
@@ -46,12 +46,18 @@
 
       /* iPads (portrait and landscape) ----------- */
       @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-        /* STYLES GO HERE */
       }
 
       /* Desktops and laptops ----------- */
       @media only screen and (min-width: 1224px) {
         /* I want this to be the default styles i set at 1440x900 */
+      }
+
+      @media only screen and (max-width: 1440px) {
+        .btn-strato {
+          font-size: 12px !important;
+          width: 100px !important;
+        }
       }
 
       /* Large screens ----------- */
@@ -62,26 +68,26 @@
       .row {
         margin: 0;
       }
+
+      body {
+        color: #61ff00;
+        font-family: "Lekton", sans-serif;
+      }
       /* end globalcss */
 
       /* NavBanner */
       section {
         display: block;
       }
-      header {
+      .header-section {
         background-color: #472f40;
         position: fixed;
         width: 100%;
         top: 0px;
-        height: 150px;
+        /* height: 150px; */
         z-index: 3;
         flex-direction: row;
         flex-wrap: nowrap !important;
-      }
-
-      body {
-        color: #61ff00;
-        font-family: "Lekton", sans-serif;
       }
 
       header nav ul {
@@ -113,9 +119,9 @@
         height: 150px;
       }
       .greeting {
-        position: absolute;
+        /* position: absolute;
         left: 40em;
-        top: 4em;
+        top: 4em; */
         font-size: 12px;
       }
       .smaller-greeting {
@@ -241,7 +247,7 @@
         left: 15%;
         background-color: #472f40 !important;
         font-size: 18px;
-        width: 24%;
+        width: 150%;
         position: absolute;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
@@ -278,9 +284,11 @@
 
   <body data-spy="scroll" data-target="#navbarResponsive">
     <!-- NavBanner -->
-    <section class="header-section">
-      <header class="row justify-content-between" flex>
-        <div class="banner-img col-xs-12 col-sm-12 col-md-6 col-lg-4">
+    <section
+      class="header-section justfy-content-center container-fluid header"
+    >
+      <div class="row">
+        <div class="banner-img col-12 col-md-6 col-lg-4 align-items-center">
           <img
             src="../img/banner-img.png"
             width="180"
@@ -289,27 +297,31 @@
           />
         </div>
 
-        <div class="greeting col-xs-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="greeting col-12 col-md-6 col-lg-4 align-self-center">
           <h2>Hello, I am Heni</h2>
           <p>
-            a M.E.R.N. Fullstack Developer / Choreographer / Director
+            a M.E.R.N. Full Stack Developer / Choreographer / Director
           </p>
         </div>
 
-        <nav class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-          <ul>
-            <a href="#projects-area" target="_top"
-              ><li id="nav-projects" class="offset">Projects</li></a
-            >
-            <a href="#about-me" target="_top"
-              ><li id="nav-about" class="offset">About Me</li></a
-            >
-            <a href="#contact-me" target="_top"
-              ><li id="nav-contact" class="offset">Contact</li></a
-            >
-          </ul>
-        </nav>
-      </header>
+        <div class="col-12 col-md-6 col-lg-4 align-self-center">
+          <div class="row">
+            <nav>
+              <ul>
+                <a href="#projects-area" target="_top"
+                  ><li id="nav-projects" class="offset">Projects</li></a
+                >
+                <a href="#about-me" target="_top"
+                  ><li id="nav-about" class="offset">About Me</li></a
+                >
+                <a href="#contact-me" target="_top"
+                  ><li id="nav-contact" class="offset">Contact</li></a
+                >
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- End NavBanner -->
     <div class="wrapper-container">
